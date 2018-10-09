@@ -34,10 +34,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblApresetation = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
+            this.lblOrders = new System.Windows.Forms.Label();
+            this.lblNewOrder = new System.Windows.Forms.Label();
+            this.btnNewOrder = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -111,51 +111,51 @@
             this.lblApresetation.TabIndex = 15;
             this.lblApresetation.Text = "Hi, o que deseja fazer ?";
             // 
-            // button3
+            // btnOrders
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(272, 164);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 75);
-            this.button3.TabIndex = 16;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnOrders.BackColor = System.Drawing.Color.White;
+            this.btnOrders.FlatAppearance.BorderSize = 0;
+            this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.Image")));
+            this.btnOrders.Location = new System.Drawing.Point(272, 164);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(79, 75);
+            this.btnOrders.TabIndex = 16;
+            this.btnOrders.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // lblOrders
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label4.Location = new System.Drawing.Point(357, 189);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 23);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Mesas em atendimento";
+            this.lblOrders.AutoSize = true;
+            this.lblOrders.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.lblOrders.Location = new System.Drawing.Point(357, 189);
+            this.lblOrders.Name = "lblOrders";
+            this.lblOrders.Size = new System.Drawing.Size(206, 23);
+            this.lblOrders.TabIndex = 18;
+            this.lblOrders.Text = "Mesas em atendimento";
             // 
-            // label3
+            // lblNewOrder
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label3.Location = new System.Drawing.Point(357, 324);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 23);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Novo pedido";
+            this.lblNewOrder.AutoSize = true;
+            this.lblNewOrder.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.lblNewOrder.Location = new System.Drawing.Point(357, 324);
+            this.lblNewOrder.Name = "lblNewOrder";
+            this.lblNewOrder.Size = new System.Drawing.Size(119, 23);
+            this.lblNewOrder.TabIndex = 20;
+            this.lblNewOrder.Text = "Novo pedido";
             // 
-            // button4
+            // btnNewOrder
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(272, 299);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 75);
-            this.button4.TabIndex = 19;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnNewOrder.BackColor = System.Drawing.Color.White;
+            this.btnNewOrder.FlatAppearance.BorderSize = 0;
+            this.btnNewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnNewOrder.Image")));
+            this.btnNewOrder.Location = new System.Drawing.Point(272, 299);
+            this.btnNewOrder.Name = "btnNewOrder";
+            this.btnNewOrder.Size = new System.Drawing.Size(79, 75);
+            this.btnNewOrder.TabIndex = 19;
+            this.btnNewOrder.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -229,10 +229,10 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lblNewOrder);
+            this.Controls.Add(this.btnNewOrder);
+            this.Controls.Add(this.lblOrders);
+            this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.lblApresetation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -261,10 +261,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblApresetation;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnOrders;
+        private System.Windows.Forms.Label lblOrders;
+        private System.Windows.Forms.Label lblNewOrder;
+        private System.Windows.Forms.Button btnNewOrder;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
