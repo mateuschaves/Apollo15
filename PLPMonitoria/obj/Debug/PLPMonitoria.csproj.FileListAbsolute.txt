@@ -8,3 +8,4 @@ C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.cs
 C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
 C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.exe
 C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources

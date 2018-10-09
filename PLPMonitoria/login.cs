@@ -29,9 +29,12 @@ namespace PLPMonitoria
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtLogin.Text.Equals("admin") && txtPassword.Text.Equals("admin"))
+            if(txtLogin.Text.Equals("Mateus") && txtPassword.Text.Equals("123"))
             {
-                MessageBox.Show("UHUUUU");
+                mainScrenn ms = new mainScrenn();
+                ms.login = txtLogin.Text;
+                ms.Show();
+                this.Hide();
             }
             else
             {
