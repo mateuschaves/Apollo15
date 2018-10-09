@@ -1,0 +1,10 @@
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\bin\Debug\PLPMonitoria.exe
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.Properties.Resources.resources
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.GenerateResource.cache
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.exe
+C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
