@@ -31,7 +31,7 @@ namespace PLPMonitoria
 
         private void mainScrenn_Load(object sender, EventArgs e)
         {
-            lblApresetation.Text = "Hi " + this.login + ", o que deseja fazer ? ";
+            lblApresetation.Text = "Oiiee " + this.login + ", o que deseja fazer ? ";
         }
     }
 }
