@@ -15,7 +15,6 @@ namespace PLPMonitoria
         public newOrder()
         {
             InitializeComponent();
-            dataOrder.Rows.Add("Camarão ao jangadeiro", 1, 14.99);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
