@@ -33,5 +33,12 @@ namespace PLPMonitoria
         {
             lblApresetation.Text = "Oiiee " + this.login + ", o que deseja fazer ? ";
         }
+
+        private void btnNewOrder_Click(object sender, EventArgs e)
+        {
+            newOrder no = new newOrder();
+            no.Show();
+            this.Hide();
+        }
     }
 }

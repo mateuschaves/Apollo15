@@ -116,6 +116,7 @@
             this.btnOrders.BackColor = System.Drawing.Color.White;
             this.btnOrders.FlatAppearance.BorderSize = 0;
             this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrders.ForeColor = System.Drawing.Color.LightCoral;
             this.btnOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.Image")));
             this.btnOrders.Location = new System.Drawing.Point(272, 164);
             this.btnOrders.Name = "btnOrders";
@@ -156,6 +157,7 @@
             this.btnNewOrder.Size = new System.Drawing.Size(79, 75);
             this.btnNewOrder.TabIndex = 19;
             this.btnNewOrder.UseVisualStyleBackColor = false;
+            this.btnNewOrder.Click += new System.EventHandler(this.btnNewOrder_Click);
             // 
             // pictureBox3
             // 
