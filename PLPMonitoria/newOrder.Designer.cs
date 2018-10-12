@@ -39,10 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataOrder = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.prato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDetails = new System.Windows.Forms.Label();
             this.numAmount = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataOrder)).BeginInit();
@@ -73,8 +75,11 @@
             this.cmbFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFood.FormattingEnabled = true;
             this.cmbFood.Items.AddRange(new object[] {
-            "Escolha uma opção"});
-            this.cmbFood.Location = new System.Drawing.Point(59, 83);
+            "Escolha uma opção",
+            "Oi",
+            "Turu",
+            "Bom"});
+            this.cmbFood.Location = new System.Drawing.Point(59, 124);
             this.cmbFood.Name = "cmbFood";
             this.cmbFood.Size = new System.Drawing.Size(145, 21);
             this.cmbFood.TabIndex = 1;
@@ -132,7 +137,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label3.Location = new System.Drawing.Point(55, 59);
+            this.label3.Location = new System.Drawing.Point(55, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 21);
             this.label3.TabIndex = 18;
@@ -141,7 +146,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 72);
+            this.pictureBox2.Location = new System.Drawing.Point(17, 113);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -171,24 +176,12 @@
             this.prato,
             this.quantidade,
             this.valor});
-            this.dataOrder.Location = new System.Drawing.Point(485, 93);
+            this.dataOrder.Location = new System.Drawing.Point(485, 134);
             this.dataOrder.Name = "dataOrder";
             this.dataOrder.ReadOnly = true;
-            this.dataOrder.Size = new System.Drawing.Size(432, 201);
+            this.dataOrder.Size = new System.Drawing.Size(456, 201);
             this.dataOrder.TabIndex = 20;
             this.dataOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataOrder_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label1.Location = new System.Drawing.Point(480, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 27);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Detalhes do pedido";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // prato
             // 
@@ -216,9 +209,21 @@
             this.valor.ReadOnly = true;
             this.valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // lblDetails
+            // 
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.lblDetails.Location = new System.Drawing.Point(480, 95);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(203, 27);
+            this.lblDetails.TabIndex = 21;
+            this.lblDetails.Text = "Detalhes do pedido";
+            this.lblDetails.Click += new System.EventHandler(this.label1_Click);
+            // 
             // numAmount
             // 
-            this.numAmount.Location = new System.Drawing.Point(259, 84);
+            this.numAmount.Location = new System.Drawing.Point(259, 125);
             this.numAmount.Maximum = new decimal(new int[] {
             20,
             0,
@@ -233,7 +238,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label4.Location = new System.Drawing.Point(255, 59);
+            this.label4.Location = new System.Drawing.Point(255, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 21);
             this.label4.TabIndex = 23;
@@ -244,7 +249,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label5.Location = new System.Drawing.Point(255, 150);
+            this.label5.Location = new System.Drawing.Point(255, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 21);
             this.label5.TabIndex = 28;
@@ -252,7 +257,7 @@
             // 
             // numDrink
             // 
-            this.numDrink.Location = new System.Drawing.Point(259, 175);
+            this.numDrink.Location = new System.Drawing.Point(259, 216);
             this.numDrink.Maximum = new decimal(new int[] {
             20,
             0,
@@ -265,7 +270,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 163);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 204);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -277,7 +282,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label6.Location = new System.Drawing.Point(55, 150);
+            this.label6.Location = new System.Drawing.Point(55, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 21);
             this.label6.TabIndex = 25;
@@ -290,7 +295,7 @@
             this.cmbDrink.FormattingEnabled = true;
             this.cmbDrink.Items.AddRange(new object[] {
             "Escolha uma opção"});
-            this.cmbDrink.Location = new System.Drawing.Point(59, 174);
+            this.cmbDrink.Location = new System.Drawing.Point(59, 215);
             this.cmbDrink.Name = "cmbDrink";
             this.cmbDrink.Size = new System.Drawing.Size(145, 21);
             this.cmbDrink.TabIndex = 24;
@@ -303,19 +308,20 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(112, 319);
+            this.btnAdd.Location = new System.Drawing.Point(17, 370);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(125, 32);
             this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label7.Location = new System.Drawing.Point(55, 230);
+            this.label7.Location = new System.Drawing.Point(55, 271);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 21);
             this.label7.TabIndex = 30;
@@ -323,7 +329,7 @@
             // 
             // txtTable
             // 
-            this.txtTable.Location = new System.Drawing.Point(59, 254);
+            this.txtTable.Location = new System.Drawing.Point(59, 295);
             this.txtTable.Name = "txtTable";
             this.txtTable.Size = new System.Drawing.Size(78, 20);
             this.txtTable.TabIndex = 31;
@@ -331,7 +337,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(17, 242);
+            this.pictureBox4.Location = new System.Drawing.Point(17, 283);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -341,7 +347,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(176, 242);
+            this.pictureBox5.Location = new System.Drawing.Point(176, 283);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -350,7 +356,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(218, 254);
+            this.txtName.Location = new System.Drawing.Point(218, 295);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(137, 20);
             this.txtName.TabIndex = 34;
@@ -360,11 +366,37 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label8.Location = new System.Drawing.Point(214, 230);
+            this.label8.Location = new System.Drawing.Point(214, 271);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 21);
             this.label8.TabIndex = 33;
             this.label8.Text = "Nome";
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnFinalizar.FlatAppearance.BorderSize = 0;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.Color.White;
+            this.btnFinalizar.Location = new System.Drawing.Point(230, 370);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(125, 32);
+            this.btnFinalizar.TabIndex = 36;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.label1.Location = new System.Drawing.Point(403, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 21);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Novo pedido";
             // 
             // newOrder
             // 
@@ -372,6 +404,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(953, 479);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
@@ -386,7 +420,7 @@
             this.Controls.Add(this.cmbDrink);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numAmount);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDetails);
             this.Controls.Add(this.dataOrder);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
@@ -398,6 +432,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "newOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataOrder)).EndInit();
@@ -421,7 +456,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataOrder;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn prato;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
@@ -439,5 +474,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -19,7 +19,6 @@ namespace PLPMonitoria
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void dataOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +38,13 @@ namespace PLPMonitoria
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            dataOrder.Rows.Add(cmbFood.SelectedItem.ToString(), numAmount.Value.ToString(), 0);
+            if(txtName.Text != "")
+                lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
         }
     }
 }
