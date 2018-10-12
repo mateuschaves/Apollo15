@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace PLPMonitoria
 {
@@ -41,5 +42,20 @@ namespace PLPMonitoria
                 MessageBox.Show("Usuário ou senha inválidos. Tente novamente !");
             }
         }
-    }
+
+		private void login_Load(object sender, EventArgs e)
+		{
+			try
+			{
+				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15.mdb";
+				OleDbConnection conecting = new OleDbConnection(strConection);
+				conecting.Open();
+				MessageBox.Show("\n Conectado com o banco de dados!!!\n");
+			} 
+			catch (Exception erro)
+			{
+				MessageBox.Show(erro.Message);
+			}
+		}
+	}
 }

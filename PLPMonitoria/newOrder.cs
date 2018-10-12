@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace PLPMonitoria
 {
@@ -46,5 +47,20 @@ namespace PLPMonitoria
             if(txtName.Text != "")
                 lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
         }
-    }
+
+		private void btnFinalizar_Click(object sender, EventArgs e)
+		{
+			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15.mdb";
+			OleDbConnection conecting = new OleDbConnection(strConection);
+			conecting.Open();
+
+			string SQL = "Insert Into Client(nome, board_number) values ('"+txtName.Text+"', '"+txtTable.Text+"')";
+			OleDbCommand comando = new OleDbCommand(SQL,conecting);
+			comando.ExecuteNonQuery();
+			conecting.Close();
+			MessageBox.Show("\n Pedido realizado!");
+			txtName.Clear();
+			txtTable.Clear();
+		}
+	}
 }
