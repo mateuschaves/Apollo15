@@ -44,12 +44,28 @@ namespace PLPMonitoria
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			// Checando se o numero de produto é maior que zero
-			if (numAmount.Value != 0)
+			if (numFood.Value != 0)
 			{
 				// Checando se foi selecionada alguma comida
 				if (cmbFood.SelectedIndex != -1)
 				{
-					dataOrder.Rows.Add(cmbFood.SelectedItem.ToString(), numAmount.Value.ToString(), 0);
+					if (txtTable.Text != "")
+					{
+						if (txtName.Text != "")
+						{
+							lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
+							dataOrder.Rows.Add(cmbFood.SelectedItem.ToString(), numFood.Value.ToString(), 0);
+						}
+						else
+						{
+							MessageBox.Show("Campo \"Nome\" obrigatório! ");
+							txtTable.Text = "";
+						}
+					}
+					else
+					{
+						MessageBox.Show("Campo \"Mesa\" obrigatório! ");
+					}
 				}
 				else
 				{
@@ -63,23 +79,29 @@ namespace PLPMonitoria
 				// Checando se foi selecionada alguma comida
 				if (cmbDrink.SelectedIndex != -1)
 				{
-					dataOrder.Rows.Add(cmbDrink.SelectedItem.ToString(), numDrink.Value.ToString(), 0);
+					if (txtTable.Text != "")
+					{
+						if (txtName.Text != "")
+						{
+							lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
+							dataOrder.Rows.Add(cmbDrink.SelectedItem.ToString(), numDrink.Value.ToString(), 0);
+						}
+						else
+						{
+							MessageBox.Show("Campo \"Nome\" obrigatório! ");
+							txtTable.Text = "";
+						}
+					}
+					else
+					{
+						MessageBox.Show("Campo \"Mesa\" obrigatório! ");
+					}
 				}
 				else
 				{
 					MessageBox.Show("Campo \"Bebidas\" obrigatório! ");
 
 				}
-			}
-
-			if (txtName.Text != "")
-			{
-				lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
-			}
-			else
-			{
-				MessageBox.Show("Campo \"Nome\" obrigatório! ");
-				txtTable.Text = "";
 			}
 
 			// Conectando com o banco de dados
@@ -89,26 +111,48 @@ namespace PLPMonitoria
 			{
 				// Abrindo o banco de dados
 				conecting.Open();
+				if (txtName.Text != "" & txtTable.Text != "")
+				{
+					/*
+					string cmd1 = "SELECT id fROM Drink WHERE nome = cmbFood.SelectedItem";
+				    string cmd2 = "SELECT id fROM Food WHERE nome = cmbDrink.SelectedItem";
+
+					OleDbDataAdapter adpter = new OleDbDataAdapter(cmd1, conecting);
+					OleDbDataAdapter adpter2 = new OleDbDataAdapter(cmd2, conecting);
+					
+
+					OleDbCommand comand1 = new OleDbCommand(cmd1, conecting);
+					OleDbCommand comand2 = new OleDbCommand(cmd2, conecting);
+					OleDbDataReader read_id_food = comand1.ExecuteReader();
+					OleDbDataReader read_id_drink = comand2.ExecuteReader();
+
+					read_id_food.Read();
+					read_id_drink.Read();
+					comand1.ExecuteNonQuery();
+					comand2.ExecuteNonQuery();
+					*/
+
+
+					// Adicionando informações ao banco de dados
+					string SQL = "Insert Into Orders(client, board_number, spent, amount_food, amount_drink) Values";
+					SQL += "('"+txtName.Text+"','"+ txtTable.Text+"','"+0+"','"+numFood.Value+"','"+numDrink.Value+"')";
+					
+
+					OleDbCommand comando = new OleDbCommand(SQL, conecting);
+					comando.ExecuteNonQuery();
+					// Fechando o banco de dados
+					conecting.Close();
+				}
 			}
 			catch (Exception erro)
 			{
 				MessageBox.Show(erro.Message);
 			}
 
-			if (txtName.Text != "")
-			{
-				// Adicionando informações ao banco de dados
-				string SQL = "Insert Into Client(nome, board_number) values ('" + txtName.Text + "', '" + txtTable.Text + "')";
-				OleDbCommand comando = new OleDbCommand(SQL, conecting);
-				comando.ExecuteNonQuery();
-				// Fechando o banco de dados
-				conecting.Close();
-			}
-			
 			// Limpando dados
-			cmbFood.Text = "";
-			cmbDrink.Text = "";
-			numAmount.Value = 0;
+			cmbFood.SelectedIndex = -1;
+			cmbDrink.SelectedIndex = -1;
+			numFood.Value = 0;
 			numDrink.Value = 0;
 		}
 
@@ -118,10 +162,19 @@ namespace PLPMonitoria
 		}
 		private void btnFinalizar_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("\n Pedido realizado!");
+			// Checando se foi adicionado algum pedido
+			if (dataOrder.RowCount != 0)
+			{
+				MessageBox.Show("\n Pedido realizado!");
+			}
 			mainScrenn go = new mainScrenn();
 			go.Show();
 			this.Hide();
+		}
+
+		private void txtTable_TextChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

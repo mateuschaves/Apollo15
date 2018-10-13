@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newOrder));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.cmbFood = new System.Windows.Forms.ComboBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
@@ -39,8 +39,11 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.dataOrder = new System.Windows.Forms.DataGridView();
+			this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.lblDetails = new System.Windows.Forms.Label();
-			this.numAmount = new System.Windows.Forms.NumericUpDown();
+			this.numFood = new System.Windows.Forms.NumericUpDown();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.numDrink = new System.Windows.Forms.NumericUpDown();
@@ -56,13 +59,10 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.btnFinalizar = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataOrder)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numAmount)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numFood)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numDrink)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -72,13 +72,14 @@
 			// cmbFood
 			// 
 			this.cmbFood.BackColor = System.Drawing.SystemColors.Window;
+			this.cmbFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbFood.FormattingEnabled = true;
 			this.cmbFood.Items.AddRange(new object[] {
             "Lazanha",
-            "Fejoada",
             "Arroz com Feijão",
-            "Carne"});
+            "Carne",
+            "Feijoada"});
 			this.cmbFood.Location = new System.Drawing.Point(59, 124);
 			this.cmbFood.Name = "cmbFood";
 			this.cmbFood.Size = new System.Drawing.Size(145, 21);
@@ -157,20 +158,20 @@
 			// 
 			this.dataOrder.AllowUserToAddRows = false;
 			this.dataOrder.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataOrder.BackgroundColor = System.Drawing.Color.White;
 			this.dataOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dataOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dataOrder.ColumnHeadersHeight = 27;
 			this.dataOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.dataOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -185,6 +186,34 @@
 			this.dataOrder.TabIndex = 20;
 			this.dataOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataOrder_CellContentClick);
 			// 
+			// Produto
+			// 
+			this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.Produto.FillWeight = 105F;
+			this.Produto.HeaderText = "Produto";
+			this.Produto.Name = "Produto";
+			this.Produto.ReadOnly = true;
+			this.Produto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Produto.Width = 205;
+			// 
+			// Quantidade
+			// 
+			this.Quantidade.FillWeight = 105F;
+			this.Quantidade.HeaderText = "Quantidade";
+			this.Quantidade.Name = "Quantidade";
+			this.Quantidade.ReadOnly = true;
+			this.Quantidade.Width = 120;
+			// 
+			// Preço
+			// 
+			this.Preço.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.Preço.FillWeight = 105F;
+			this.Preço.HeaderText = "Preço unit.";
+			this.Preço.Name = "Preço";
+			this.Preço.ReadOnly = true;
+			this.Preço.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Preço.Width = 110;
+			// 
 			// lblDetails
 			// 
 			this.lblDetails.AutoSize = true;
@@ -197,17 +226,17 @@
 			this.lblDetails.Text = "Detalhes do pedido";
 			this.lblDetails.Click += new System.EventHandler(this.label1_Click);
 			// 
-			// numAmount
+			// numFood
 			// 
-			this.numAmount.Location = new System.Drawing.Point(259, 125);
-			this.numAmount.Maximum = new decimal(new int[] {
+			this.numFood.Location = new System.Drawing.Point(259, 125);
+			this.numFood.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-			this.numAmount.Name = "numAmount";
-			this.numAmount.Size = new System.Drawing.Size(96, 20);
-			this.numAmount.TabIndex = 22;
+			this.numFood.Name = "numFood";
+			this.numFood.Size = new System.Drawing.Size(96, 20);
+			this.numFood.TabIndex = 22;
 			// 
 			// label4
 			// 
@@ -267,12 +296,14 @@
 			// cmbDrink
 			// 
 			this.cmbDrink.BackColor = System.Drawing.SystemColors.Window;
+			this.cmbDrink.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbDrink.FormattingEnabled = true;
 			this.cmbDrink.Items.AddRange(new object[] {
             "Coca Cola",
             "Suco de laranja",
-            "Vinho"});
+            "Vinho",
+            "Coca Cola"});
 			this.cmbDrink.Location = new System.Drawing.Point(59, 215);
 			this.cmbDrink.Name = "cmbDrink";
 			this.cmbDrink.Size = new System.Drawing.Size(145, 21);
@@ -311,6 +342,7 @@
 			this.txtTable.Name = "txtTable";
 			this.txtTable.Size = new System.Drawing.Size(78, 20);
 			this.txtTable.TabIndex = 31;
+			this.txtTable.TextChanged += new System.EventHandler(this.txtTable_TextChanged);
 			// 
 			// pictureBox4
 			// 
@@ -377,34 +409,6 @@
 			this.label1.TabIndex = 37;
 			this.label1.Text = "Novo pedido";
 			// 
-			// Produto
-			// 
-			this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.Produto.FillWeight = 105F;
-			this.Produto.HeaderText = "Produto";
-			this.Produto.Name = "Produto";
-			this.Produto.ReadOnly = true;
-			this.Produto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Produto.Width = 205;
-			// 
-			// Quantidade
-			// 
-			this.Quantidade.FillWeight = 105F;
-			this.Quantidade.HeaderText = "Quantidade";
-			this.Quantidade.Name = "Quantidade";
-			this.Quantidade.ReadOnly = true;
-			this.Quantidade.Width = 120;
-			// 
-			// Preço
-			// 
-			this.Preço.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.Preço.FillWeight = 105F;
-			this.Preço.HeaderText = "Preço unit.";
-			this.Preço.Name = "Preço";
-			this.Preço.ReadOnly = true;
-			this.Preço.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Preço.Width = 110;
-			// 
 			// newOrder
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,7 +430,7 @@
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.cmbDrink);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.numAmount);
+			this.Controls.Add(this.numFood);
 			this.Controls.Add(this.lblDetails);
 			this.Controls.Add(this.dataOrder);
 			this.Controls.Add(this.pictureBox2);
@@ -443,7 +447,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataOrder)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numAmount)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numFood)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numDrink)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -464,7 +468,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataOrder;
         private System.Windows.Forms.Label lblDetails;
-        private System.Windows.Forms.NumericUpDown numAmount;
+        private System.Windows.Forms.NumericUpDown numFood;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numDrink;
