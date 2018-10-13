@@ -45,12 +45,12 @@ namespace PLPMonitoria
 
 		private void login_Load(object sender, EventArgs e)
 		{
+			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+			OleDbConnection conecting = new OleDbConnection(strConection);
 			try
 			{
-				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15.mdb";
-				OleDbConnection conecting = new OleDbConnection(strConection);
+				// Abrindo o banco de dados
 				conecting.Open();
-				MessageBox.Show("\n Conectado com o banco de dados!!!\n");
 			} 
 			catch (Exception erro)
 			{
