@@ -34,3 +34,4 @@ C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.Gener
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
+C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb

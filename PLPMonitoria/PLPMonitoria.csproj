@@ -46,6 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apollo15DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apollo15DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Apollo15DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apollo15DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Apollo15DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apollo15DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Apollo15DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apollo15DataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +104,50 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Apollo15DataSet.xsc">
+      <DependentUpon>Apollo15DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Apollo15DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Apollo15DataSet.xss">
+      <DependentUpon>Apollo15DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet1.xsc">
+      <DependentUpon>Apollo15DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Apollo15DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Apollo15DataSet1.xss">
+      <DependentUpon>Apollo15DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet2.xsc">
+      <DependentUpon>Apollo15DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Apollo15DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Apollo15DataSet2.xss">
+      <DependentUpon>Apollo15DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet3.xsc">
+      <DependentUpon>Apollo15DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Apollo15DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Apollo15DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Apollo15DataSet3.xss">
+      <DependentUpon>Apollo15DataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +160,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Apollo15.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

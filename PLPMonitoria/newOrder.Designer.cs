@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newOrder));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.cmbFood = new System.Windows.Forms.ComboBox();
+			this.foodBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.apollo15DataSet2 = new PLPMonitoria.Apollo15DataSet2();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +62,17 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.btnFinalizar = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
+			this.apollo15DataSet = new PLPMonitoria.Apollo15DataSet();
+			this.apollo15DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.apollo15DataSet1 = new PLPMonitoria.Apollo15DataSet1();
+			this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.foodTableAdapter = new PLPMonitoria.Apollo15DataSet1TableAdapters.FoodTableAdapter();
+			this.foodTableAdapter1 = new PLPMonitoria.Apollo15DataSet2TableAdapters.FoodTableAdapter();
+			this.apollo15DataSet3 = new PLPMonitoria.Apollo15DataSet3();
+			this.drinkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.drinkTableAdapter = new PLPMonitoria.Apollo15DataSet3TableAdapters.DrinkTableAdapter();
+			((System.ComponentModel.ISupportInitialize)(this.foodBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataOrder)).BeginInit();
@@ -67,23 +81,41 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSetBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.drinkBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// cmbFood
 			// 
 			this.cmbFood.BackColor = System.Drawing.SystemColors.Window;
+			this.cmbFood.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.foodBindingSource1, "nome", true));
+			this.cmbFood.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.foodBindingSource1, "nome", true));
+			this.cmbFood.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.foodBindingSource1, "nome", true));
+			this.cmbFood.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource1, "nome", true));
+			this.cmbFood.DisplayMember = "nome";
 			this.cmbFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbFood.FormattingEnabled = true;
-			this.cmbFood.Items.AddRange(new object[] {
-            "Feijoada",
-            "Lazanha",
-            "Salada"});
 			this.cmbFood.Location = new System.Drawing.Point(59, 124);
 			this.cmbFood.Name = "cmbFood";
 			this.cmbFood.Size = new System.Drawing.Size(145, 21);
 			this.cmbFood.TabIndex = 1;
+			this.cmbFood.ValueMember = "nome";
 			this.cmbFood.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+			// 
+			// foodBindingSource1
+			// 
+			this.foodBindingSource1.DataMember = "Food";
+			this.foodBindingSource1.DataSource = this.apollo15DataSet2;
+			// 
+			// apollo15DataSet2
+			// 
+			this.apollo15DataSet2.DataSetName = "Apollo15DataSet2";
+			this.apollo15DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// button2
 			// 
@@ -157,27 +189,27 @@
 			// 
 			this.dataOrder.AllowUserToAddRows = false;
 			this.dataOrder.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dataOrder.BackgroundColor = System.Drawing.Color.White;
 			this.dataOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dataOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dataOrder.ColumnHeadersHeight = 27;
 			this.dataOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.dataOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Produto,
             this.Quantidade,
             this.Preço});
-			this.dataOrder.Location = new System.Drawing.Point(476, 134);
+			this.dataOrder.Location = new System.Drawing.Point(476, 124);
 			this.dataOrder.Name = "dataOrder";
 			this.dataOrder.ReadOnly = true;
 			this.dataOrder.RowHeadersWidth = 30;
@@ -201,6 +233,7 @@
 			this.Quantidade.HeaderText = "Quantidade";
 			this.Quantidade.Name = "Quantidade";
 			this.Quantidade.ReadOnly = true;
+			this.Quantidade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.Quantidade.Width = 120;
 			// 
 			// Preço
@@ -298,14 +331,11 @@
 			this.cmbDrink.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbDrink.FormattingEnabled = true;
-			this.cmbDrink.Items.AddRange(new object[] {
-            "Coca Cola",
-            "Vinho Branco",
-            "Suco de Acerola"});
-			this.cmbDrink.Location = new System.Drawing.Point(59, 215);
+			this.cmbDrink.Location = new System.Drawing.Point(59, 216);
 			this.cmbDrink.Name = "cmbDrink";
 			this.cmbDrink.Size = new System.Drawing.Size(145, 21);
 			this.cmbDrink.TabIndex = 24;
+			this.cmbDrink.SelectedIndexChanged += new System.EventHandler(this.cmbDrink_SelectedIndexChanged);
 			// 
 			// btnAdd
 			// 
@@ -407,6 +437,48 @@
 			this.label1.TabIndex = 37;
 			this.label1.Text = "Novo pedido";
 			// 
+			// apollo15DataSet
+			// 
+			this.apollo15DataSet.DataSetName = "Apollo15DataSet";
+			this.apollo15DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// apollo15DataSetBindingSource
+			// 
+			this.apollo15DataSetBindingSource.DataSource = this.apollo15DataSet;
+			this.apollo15DataSetBindingSource.Position = 0;
+			// 
+			// apollo15DataSet1
+			// 
+			this.apollo15DataSet1.DataSetName = "Apollo15DataSet1";
+			this.apollo15DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// foodBindingSource
+			// 
+			this.foodBindingSource.DataMember = "Food";
+			this.foodBindingSource.DataSource = this.apollo15DataSet1;
+			// 
+			// foodTableAdapter
+			// 
+			this.foodTableAdapter.ClearBeforeFill = true;
+			// 
+			// foodTableAdapter1
+			// 
+			this.foodTableAdapter1.ClearBeforeFill = true;
+			// 
+			// apollo15DataSet3
+			// 
+			this.apollo15DataSet3.DataSetName = "Apollo15DataSet3";
+			this.apollo15DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// drinkBindingSource
+			// 
+			this.drinkBindingSource.DataMember = "Drink";
+			this.drinkBindingSource.DataSource = this.apollo15DataSet3;
+			// 
+			// drinkTableAdapter
+			// 
+			this.drinkTableAdapter.ClearBeforeFill = true;
+			// 
 			// newOrder
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,6 +514,9 @@
 			this.Name = "newOrder";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = " ";
+			this.Load += new System.EventHandler(this.newOrder_Load);
+			((System.ComponentModel.ISupportInitialize)(this.foodBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataOrder)).EndInit();
@@ -450,14 +525,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSetBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.drinkBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbFood;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
@@ -472,7 +551,6 @@
         private System.Windows.Forms.NumericUpDown numDrink;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbDrink;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTable;
@@ -482,8 +560,21 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.BindingSource apollo15DataSetBindingSource;
+		private Apollo15DataSet apollo15DataSet;
+		private Apollo15DataSet1 apollo15DataSet1;
+		private System.Windows.Forms.BindingSource foodBindingSource;
+		private Apollo15DataSet1TableAdapters.FoodTableAdapter foodTableAdapter;
+		private Apollo15DataSet2 apollo15DataSet2;
+		private System.Windows.Forms.BindingSource foodBindingSource1;
+		private Apollo15DataSet2TableAdapters.FoodTableAdapter foodTableAdapter1;
+		private Apollo15DataSet3 apollo15DataSet3;
+		private System.Windows.Forms.BindingSource drinkBindingSource;
+		private Apollo15DataSet3TableAdapters.DrinkTableAdapter drinkTableAdapter;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
+		private System.Windows.Forms.ComboBox cmbFood;
+		private System.Windows.Forms.ComboBox cmbDrink;
 	}
 }
