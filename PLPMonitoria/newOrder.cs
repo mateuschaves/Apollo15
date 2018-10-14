@@ -43,6 +43,9 @@ namespace PLPMonitoria
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
+			// String de conection com o banco de dados
+			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+
 			// Checando se o numero de produto é maior que zero
 			if (numFood.Value != 0)
 			{
@@ -53,8 +56,29 @@ namespace PLPMonitoria
 					{
 						if (txtName.Text != "")
 						{
-							lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
-							dataOrder.Rows.Add(cmbFood.SelectedItem.ToString(), numFood.Value.ToString(), 0);
+							// Conectando com o banco de dados
+							try
+							{	
+								OleDbConnection conecting = new OleDbConnection(strConection);
+								// Abrindo o banco de dados
+								conecting.Open();
+
+								string cmd1 = @"SELECT price fROM Food WHERE nome = '"+cmbFood.SelectedItem.ToString()+"'";
+								OleDbCommand comand = new OleDbCommand(cmd1, conecting);
+								OleDbDataReader read_price_food = comand.ExecuteReader();
+								read_price_food.Read();
+
+								lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
+								dataOrder.Rows.Add(cmbFood.SelectedItem.ToString(), numFood.Value.ToString(), "R$ " + read_price_food["price"]);
+
+
+								// Fechando o banco de dados
+								conecting.Close();
+							}
+							catch (Exception erro)
+							{
+								MessageBox.Show(erro.Message);
+							}
 						}
 						else
 						{
@@ -83,8 +107,25 @@ namespace PLPMonitoria
 					{
 						if (txtName.Text != "")
 						{
-							lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
-							dataOrder.Rows.Add(cmbDrink.SelectedItem.ToString(), numDrink.Value.ToString(), 0);
+							// Conectando com o banco de dados
+							try
+							{
+								OleDbConnection conecting = new OleDbConnection(strConection);
+								// Abrindo o banco de dados
+								conecting.Open();
+
+								string cmd1 = @"SELECT price fROM Drink WHERE nome = '" + cmbDrink.SelectedItem.ToString() + "'";
+								OleDbCommand comand= new OleDbCommand(cmd1, conecting);
+								OleDbDataReader read_price_drink = comand.ExecuteReader();
+								read_price_drink.Read();
+
+								lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
+								dataOrder.Rows.Add(cmbDrink.SelectedItem.ToString(), numDrink.Value.ToString(), "R$ " + read_price_drink["price"]);
+							}
+							catch (Exception erro)
+							{
+								MessageBox.Show(erro.Message);
+							}
 						}
 						else
 						{
@@ -104,49 +145,75 @@ namespace PLPMonitoria
 				}
 			}
 
-			// Conectando com o banco de dados
-			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
-			OleDbConnection conecting = new OleDbConnection(strConection);
-			try
+
+			if (txtName.Text != "" & txtTable.Text != "")
 			{
-				// Abrindo o banco de dados
-				conecting.Open();
-				if (txtName.Text != "" & txtTable.Text != "")
-				{
-					string cmd1 = @"SELECT id fROM Drink WHERE nome = '"+cmbDrink.SelectedItem.ToString()+"'"; 
-				    string cmd2 = @"SELECT id fROM Food WHERE nome = '"+cmbFood.SelectedItem.ToString()+"'";
-				
-					OleDbCommand comand1 = new OleDbCommand(cmd1, conecting);
-					OleDbCommand comand2 = new OleDbCommand(cmd2, conecting);
-		
-					OleDbDataReader read_id_drink = comand1.ExecuteReader();
-					read_id_drink.Read();
-					OleDbDataReader read_id_food = comand2.ExecuteReader();
-					read_id_food.Read();
-					
+				try {
+					// Conectando com o banco de dados
+					OleDbConnection conecting = new OleDbConnection(strConection);
+					// Abrindo o banco de dados
+					conecting.Open();
 
-					// Adicionando informações ao banco de dados
-					string SQL = "Insert Into Orders(status,client, board_number, spent,food_id, amount_food,drink_id, amount_drink) Values";
-					SQL += "('Em andamento','"+txtName.Text+"','"+ txtTable.Text+"','"+0+"','"+read_id_food["id"]+ "','"+numFood.Value+ "','" +read_id_drink["id"] + "','" + numDrink.Value+"')";
-					
 
-					OleDbCommand comando = new OleDbCommand(SQL, conecting);
-					comando.ExecuteNonQuery();
+					if (numDrink.Value != 0 & cmbDrink.SelectedIndex != -1 & numFood.Value != 0 & cmbFood.SelectedIndex != -1)
+					{
+						string cmd1 = @"SELECT id fROM Drink WHERE nome = '" + cmbDrink.SelectedItem.ToString() + "'";
+						string cmd2 = @"SELECT id fROM Food WHERE nome = '" + cmbFood.SelectedItem.ToString() + "'";
+						OleDbCommand comand1 = new OleDbCommand(cmd1, conecting);
+						OleDbCommand comand2 = new OleDbCommand(cmd2, conecting);
+						OleDbDataReader read_id_drink = comand1.ExecuteReader();
+						read_id_drink.Read();
+						OleDbDataReader read_id_food = comand2.ExecuteReader();
+						read_id_food.Read();
+
+						// Adicionando informações ao banco de dados
+						string SQL = "Insert Into Orders(status, client, board_number, spent, food_id, amount_food, drink_id, amount_drink) Values";
+						SQL += "('Em andamento','" + txtName.Text + "','" + txtTable.Text + "','" + 0 + "','" + read_id_food["id"] + "','" + numFood.Value + "','" + read_id_drink["id"] + "','" + numDrink.Value + "')";
+						OleDbCommand comando = new OleDbCommand(SQL, conecting);
+						comando.ExecuteNonQuery();
+					}
+					else if (numDrink.Value == 0 & cmbDrink.SelectedIndex == -1)
+					{
+						string cmd2 = @"SELECT id fROM Food WHERE nome = '" + cmbFood.SelectedItem.ToString() + "'";
+						OleDbCommand comand2 = new OleDbCommand(cmd2, conecting);
+						OleDbDataReader read_id_food = comand2.ExecuteReader();
+						read_id_food.Read();
+
+						// Adicionando informações ao banco de dados
+						string SQL = "Insert Into Orders(status, client, board_number, spent, food_id, amount_food, drink_id, amount_drink) Values";
+						SQL += "('Em andamento','" + txtName.Text + "','" + txtTable.Text + "','" + 0 + "','" + read_id_food["id"] + "','" + numFood.Value + "','" + 0 + "','" + 0 + "')";
+						OleDbCommand comando = new OleDbCommand(SQL, conecting);
+						comando.ExecuteNonQuery();
+					}
+					else
+					{
+						string cmd1 = @"SELECT id fROM Drink WHERE nome = '" + cmbDrink.SelectedItem.ToString() + "'";
+						OleDbCommand comand1 = new OleDbCommand(cmd1, conecting);
+						OleDbDataReader read_id_drink = comand1.ExecuteReader();
+						read_id_drink.Read();
+
+						// Adicionando informações ao banco de dados
+						string SQL = "Insert Into Orders(status, client, board_number, spent, food_id, amount_food,drink_id, amount_drink) Values";
+						SQL += "('Em andamento','" + txtName.Text + "','" + txtTable.Text + "','" + 0 + "','" + 0 + "','" + 0 + "','" + read_id_drink["id"] + "','" + numDrink.Value + "')";
+						OleDbCommand comando = new OleDbCommand(SQL, conecting);
+						comando.ExecuteNonQuery();
+					}
+
 					// Fechando o banco de dados
 					conecting.Close();
-				}
-			}
-			catch (Exception erro)
-			{
-				MessageBox.Show(erro.Message);
-			}
+				} catch (Exception erro) {
+					MessageBox.Show(erro.Message);
 
+				}
+
+			}
 			// Limpando dados
 			cmbFood.SelectedIndex = -1;
 			cmbDrink.SelectedIndex = -1;
 			numFood.Value = 0;
 			numDrink.Value = 0;
 		}
+	
 
 		private ComboBox GetCmbFood()
 		{
