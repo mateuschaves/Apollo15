@@ -113,29 +113,21 @@ namespace PLPMonitoria
 				conecting.Open();
 				if (txtName.Text != "" & txtTable.Text != "")
 				{
-					/*
-					string cmd1 = "SELECT id fROM Drink WHERE nome = cmbFood.SelectedItem";
-				    string cmd2 = "SELECT id fROM Food WHERE nome = cmbDrink.SelectedItem";
-
-					OleDbDataAdapter adpter = new OleDbDataAdapter(cmd1, conecting);
-					OleDbDataAdapter adpter2 = new OleDbDataAdapter(cmd2, conecting);
-					
-
+					string cmd1 = @"SELECT id fROM Drink WHERE nome = '"+cmbDrink.SelectedItem.ToString()+"'"; 
+				    string cmd2 = @"SELECT id fROM Food WHERE nome = '"+cmbFood.SelectedItem.ToString()+"'";
+				
 					OleDbCommand comand1 = new OleDbCommand(cmd1, conecting);
 					OleDbCommand comand2 = new OleDbCommand(cmd2, conecting);
-					OleDbDataReader read_id_food = comand1.ExecuteReader();
-					OleDbDataReader read_id_drink = comand2.ExecuteReader();
-
-					read_id_food.Read();
+		
+					OleDbDataReader read_id_drink = comand1.ExecuteReader();
 					read_id_drink.Read();
-					comand1.ExecuteNonQuery();
-					comand2.ExecuteNonQuery();
-					*/
-
+					OleDbDataReader read_id_food = comand2.ExecuteReader();
+					read_id_food.Read();
+					
 
 					// Adicionando informações ao banco de dados
-					string SQL = "Insert Into Orders(client, board_number, spent, amount_food, amount_drink) Values";
-					SQL += "('"+txtName.Text+"','"+ txtTable.Text+"','"+0+"','"+numFood.Value+"','"+numDrink.Value+"')";
+					string SQL = "Insert Into Orders(status,client, board_number, spent,food_id, amount_food,drink_id, amount_drink) Values";
+					SQL += "('Em andamento','"+txtName.Text+"','"+ txtTable.Text+"','"+0+"','"+read_id_food["id"]+ "','"+numFood.Value+ "','" +read_id_drink["id"] + "','" + numDrink.Value+"')";
 					
 
 					OleDbCommand comando = new OleDbCommand(SQL, conecting);
