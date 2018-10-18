@@ -35,3 +35,16 @@ C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreC
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.newOrder.resources
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Properties.Resources.resources
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.GenerateResource.cache
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
+C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
