@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newOrder));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbFood = new System.Windows.Forms.ComboBox();
             this.foodBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.apollo15DataSet2 = new PLPMonitoria.Apollo15DataSet2();
@@ -71,7 +71,10 @@
             this.apollo15DataSet3 = new PLPMonitoria.Apollo15DataSet3();
             this.drinkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.drinkTableAdapter = new PLPMonitoria.Apollo15DataSet3TableAdapters.DrinkTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,6 +123,7 @@
             // 
             // button2
             // 
+            this.button2.AccessibleDescription = "Minimizar a janela";
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -133,6 +137,7 @@
             // 
             // button1
             // 
+            this.button1.AccessibleDescription = "Fechar a janela";
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -149,7 +154,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-            this.label2.Location = new System.Drawing.Point(845, 338);
+            this.label2.Location = new System.Drawing.Point(836, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 17;
@@ -190,20 +195,20 @@
             // 
             this.dataOrder.AllowUserToAddRows = false;
             this.dataOrder.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataOrder.BackgroundColor = System.Drawing.Color.White;
             this.dataOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataOrder.ColumnHeadersHeight = 27;
             this.dataOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -340,6 +345,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.AccessibleDescription = "Adiconar a lista de pedidos";
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnAdd.FlatAppearance.BorderSize = 0;
@@ -413,6 +419,7 @@
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.AccessibleDescription = "Finalizar pedido";
             this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
             this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnFinalizar.FlatAppearance.BorderSize = 0;
@@ -480,18 +487,58 @@
             // 
             this.drinkTableAdapter.ClearBeforeFill = true;
             // 
-            // button3
+            // btnBack
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(11, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 39);
-            this.button3.TabIndex = 38;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBack.AccessibleDescription = "Voltar ao menu principal";
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(11, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(38, 39);
+            this.btnBack.TabIndex = 38;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AccessibleDescription = "Deleta um pedido";
+            this.btnDelete.AccessibleName = "Deleta um pedido";
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(661, 311);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(38, 39);
+            this.btnDelete.TabIndex = 39;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AccessibleDescription = "Edita um pedido";
+            this.btnEdit.AccessibleName = "Edita um pedido";
+            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(725, 311);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(38, 39);
+            this.btnEdit.TabIndex = 40;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
+            this.lblTotal.Location = new System.Drawing.Point(471, 323);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(148, 27);
+            this.lblTotal.TabIndex = 41;
+            this.lblTotal.Text = "Total: R$ 0,00";
             // 
             // newOrder
             // 
@@ -499,7 +546,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(953, 479);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.pictureBox5);
@@ -591,6 +641,9 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
 		private System.Windows.Forms.ComboBox cmbFood;
 		private System.Windows.Forms.ComboBox cmbDrink;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
