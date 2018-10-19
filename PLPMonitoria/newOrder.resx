@@ -123,9 +123,6 @@
   <metadata name="apollo15DataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
-  <metadata name="apollo15DataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -765,4 +762,17 @@
   <metadata name="drinkTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4goTBxIDe/bHFQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFASURBVFhH
+        YxgFpAIFhwQO4cACTSiXvkDYN8dJyD/3LRD/B+Kd4m4l3FAp2gOo5d+gloOxoH/uIqg0bYFwQJ4zuuVQ
+        /J0hLY0Vqow2AI/l/4X8cpdBldEGCPvnugAtwm65f+4R0dAsHqhS6gMClh8V8SvjhSqlPhDyy3YFWjKg
+        ln9HsxSGj9HW8oBcN6AluCw/LuSZywdVSn2A3/KcE7S13D/HHWgRLp//EfLP6xMKyGugJhb2y4uX8k3j
+        guVzXJbTFANL0vVA3+eeQZegI/470A74NaBRACzKVxJMhMAS8QcQd2BLSJRgoJlxoLYF2AEgQKAM2IGi
+        mFaAgCN20scR+IrigLxdMqGFnFCltAMEKqPddHEEgep4z8A7IiB3L30cgadJNhgapd9o3iiFgQFtlsPA
+        gHZMYGBAu2bDEDAwAAAS5j5jjDaV5wAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
