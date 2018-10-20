@@ -205,17 +205,38 @@ namespace PLPMonitoria
 				// Mudando o total de todos o pedidos (tela de pedidos)
 				lblTotal.Text = "Total: R$ " + String.Format("{0:f2}", spent);
 
-				// Adicionando pedido do client no banco de dados
-				string SQL = "Insert Into ClientOrders(status, client, board_number, spent) Values";
-				SQL += "('Em andamento','" + txtName.Text + "','" + txtTable.Text + "','" + String.Format("{0:0.00}", spent) + "')";
-				OleDbCommand comando = new OleDbCommand(SQL, conecting);
-				comando.ExecuteNonQuery();
+				// Verifica se é uma mesa que já está no banco de dados
+				string sqlJaExiste = "SELECT * FROM ClientOrders";
+				OleDbCommand cmd3 = new OleDbCommand(sqlJaExiste, conecting);
+				OleDbDataReader verificamesa = cmd3.ExecuteReader();
+
+				bool jatem = false;
+				while (verificamesa.Read())
+				{
+					if(verificamesa["board_number"].ToString() == txtTable.Text)
+					{
+						string atualiza_spent = @"UPDATE ClientOrders SET spent =  '" + String.Format("{0:0.00}", spent) + "' WHERE client =  '" + txtName.Text  + "'";
+						OleDbCommand comand = new OleDbCommand(atualiza_spent, conecting);
+						comand.ExecuteNonQuery();
+						jatem = true;
+						break;
+					}
+				}
+
+				if (!jatem)
+				{
+					// Adicionando pedido do client no banco de dados
+					string SQL = "Insert Into ClientOrders(status, client, board_number, spent) Values";
+					SQL += "('Em andamento','" + txtName.Text + "','" + txtTable.Text + "','" + String.Format("{0:0.00}", spent) + "')";
+					OleDbCommand comando = new OleDbCommand(SQL, conecting);
+					comando.ExecuteNonQuery();
+				}
 				// Fechando o banco de dados
 				conecting.Close();
 			}
 			catch
 			{
-				MessageBox.Show("Erro ao fazer conexão com o banco de dado! ");
+				MessageBox.Show("Erro ao fazer conexão com o banco de dado! aqui ");
 			}
 
 			// Limpando dados
