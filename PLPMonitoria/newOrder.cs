@@ -90,7 +90,7 @@ namespace PLPMonitoria
 							}
 							catch 
 							{
-								MessageBox.Show("Erro ao fazer conexão com o banco de dado");
+								MessageBox.Show("Erro ao fazer conexão com o banco de dado!");
 							}
 						}
 						else
@@ -236,7 +236,7 @@ namespace PLPMonitoria
 			}
 			catch
 			{
-				MessageBox.Show("Erro ao fazer conexão com o banco de dado! aqui ");
+				MessageBox.Show("Erro ao fazer conexão com o banco de dado!");
 			}
 
 			// Limpando dados
@@ -321,9 +321,10 @@ namespace PLPMonitoria
 
 		private void btnDelete_Click(object sender, EventArgs e)
 		{
+			// Remove a linha selecionada no datagridview
+			dataOrder.Rows.Remove(dataOrder.CurrentRow);
 
 		}
-
 		private void btnEdit_Click(object sender, EventArgs e)
 		{
 
