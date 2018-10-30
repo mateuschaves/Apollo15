@@ -42,6 +42,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.dataOrder = new System.Windows.Forms.DataGridView();
+			this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -213,19 +214,27 @@
 			this.dataOrder.ColumnHeadersHeight = 27;
 			this.dataOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.dataOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Tipo,
             this.Produto,
             this.Quantidade,
             this.Preço});
-			this.dataOrder.Location = new System.Drawing.Point(476, 124);
+			this.dataOrder.Location = new System.Drawing.Point(433, 125);
 			this.dataOrder.MultiSelect = false;
 			this.dataOrder.Name = "dataOrder";
 			this.dataOrder.ReadOnly = true;
 			this.dataOrder.RowHeadersWidth = 30;
 			this.dataOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
 			this.dataOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataOrder.Size = new System.Drawing.Size(465, 181);
+			this.dataOrder.Size = new System.Drawing.Size(522, 181);
 			this.dataOrder.TabIndex = 20;
 			this.dataOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataOrder_CellContentClick);
+			// 
+			// Tipo
+			// 
+			this.Tipo.HeaderText = "Tipo";
+			this.Tipo.Name = "Tipo";
+			this.Tipo.ReadOnly = true;
+			this.Tipo.Width = 75;
 			// 
 			// Produto
 			// 
@@ -235,7 +244,7 @@
 			this.Produto.Name = "Produto";
 			this.Produto.ReadOnly = true;
 			this.Produto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Produto.Width = 205;
+			this.Produto.Width = 185;
 			// 
 			// Quantidade
 			// 
@@ -261,7 +270,7 @@
 			this.lblDetails.AutoSize = true;
 			this.lblDetails.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-			this.lblDetails.Location = new System.Drawing.Point(471, 94);
+			this.lblDetails.Location = new System.Drawing.Point(428, 94);
 			this.lblDetails.Name = "lblDetails";
 			this.lblDetails.Size = new System.Drawing.Size(203, 27);
 			this.lblDetails.TabIndex = 21;
@@ -513,7 +522,7 @@
 			this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnDelete.ForeColor = System.Drawing.Color.White;
 			this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-			this.btnDelete.Location = new System.Drawing.Point(661, 311);
+			this.btnDelete.Location = new System.Drawing.Point(591, 312);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(38, 39);
 			this.btnDelete.TabIndex = 39;
@@ -528,7 +537,7 @@
 			this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEdit.ForeColor = System.Drawing.Color.White;
 			this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-			this.btnEdit.Location = new System.Drawing.Point(725, 311);
+			this.btnEdit.Location = new System.Drawing.Point(660, 312);
 			this.btnEdit.Name = "btnEdit";
 			this.btnEdit.Size = new System.Drawing.Size(38, 39);
 			this.btnEdit.TabIndex = 40;
@@ -540,7 +549,7 @@
 			this.lblTotal.AutoSize = true;
 			this.lblTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(86)))), ((int)(((byte)(104)))));
-			this.lblTotal.Location = new System.Drawing.Point(471, 323);
+			this.lblTotal.Location = new System.Drawing.Point(428, 323);
 			this.lblTotal.Name = "lblTotal";
 			this.lblTotal.Size = new System.Drawing.Size(148, 27);
 			this.lblTotal.TabIndex = 41;
@@ -642,14 +651,15 @@
 		private Apollo15DataSet3 apollo15DataSet3;
 		private System.Windows.Forms.BindingSource drinkBindingSource;
 		private Apollo15DataSet3TableAdapters.DrinkTableAdapter drinkTableAdapter;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
 		private System.Windows.Forms.ComboBox cmbFood;
 		private System.Windows.Forms.ComboBox cmbDrink;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblTotal;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
+	}
 }

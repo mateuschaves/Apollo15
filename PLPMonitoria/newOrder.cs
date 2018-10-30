@@ -83,7 +83,7 @@ namespace PLPMonitoria
 								// Alterando o label Detalhes do pedido (adicionando o nome do cliente)
 								lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
 								// Adicionando o pedido ao DataGridView
-								dataOrder.Rows.Add(cmbFood.GetItemText(cmbFood.SelectedItem), numFood.Value.ToString(), "R$ " + String.Format("{0:0.00}", read_price_food["price"]));
+								dataOrder.Rows.Add("Comida",cmbFood.GetItemText(cmbFood.SelectedItem), numFood.Value.ToString(), "R$ " + String.Format("{0:0.00}", read_price_food["price"]));
 
 								// Fechando o banco de dados
 								conecting.Close();
@@ -145,7 +145,7 @@ namespace PLPMonitoria
 								// Alterando o label Detalhes do pedido (adicionando o nome do cliente)
 								lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
 								// Adicionando o pedido ao DataGridView
-								dataOrder.Rows.Add(cmbDrink.GetItemText(cmbDrink.SelectedItem), numDrink.Value.ToString(), "R$ " + String.Format("{0:0.00}", read_price_drink["price"])); 								
+								dataOrder.Rows.Add("Bebida", cmbDrink.GetItemText(cmbDrink.SelectedItem), numDrink.Value.ToString(), "R$ " + String.Format("{0:0.00}", read_price_drink["price"])); 								
 								// Fechando o banco de dados
 								conecting.Close();
 							}
@@ -260,10 +260,18 @@ namespace PLPMonitoria
 			go.Show();
 			this.Hide();
 		}
-		private void txtTable_TextChanged(object sender, EventArgs e)
+		private void txtTable_TextChanged(object sender, KeyPressEventArgs e)
 		{
-
+			if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+			{
+				e.Handled = true;
+			}
+			if (e.Handled)
+			{
+				MessageBox.Show(" Só é permitido número!!");
+			}
 		}
+	
 		private void newOrder_Load(object sender, EventArgs e)
 		{
 			// Preechendo o Combobox com dados do banco de dados 
@@ -321,11 +329,48 @@ namespace PLPMonitoria
 
 		private void btnDelete_Click(object sender, EventArgs e)
 		{
-			// Remove a linha selecionada no datagridview
-			dataOrder.Rows.Remove(dataOrder.CurrentRow);
+			
+			try
+			{
+				// String de conection com o banco de dados
+				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
+				OleDbConnection conecting = new OleDbConnection(strConection);
+				conecting.Open();
 
+				// Nome do produto selecionado 
+				string Produto_selecionado = dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[1].Value.ToString();
+
+				if (dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[0].Value.ToString() == "Bebida")
+				{
+					string ExluiPedido = @"DELETE FROM DrinkOrders WHERE drink = '" + Produto_selecionado + "'";
+					OleDbCommand comand = new OleDbCommand(ExluiPedido, conecting);
+					comand.ExecuteNonQuery();
+				}
+				else
+				{
+					string ExluiPedido2 = @"DELETE FROM FoodOrders WHERE food = '" + Produto_selecionado + "'";
+					OleDbCommand comand = new OleDbCommand(ExluiPedido2, conecting);
+					comand.ExecuteNonQuery();
+				}
+
+				// Remove a linha selecionada no datagridview
+				dataOrder.Rows.Remove(dataOrder.CurrentRow);
+
+				// Fechando o banco de dados
+				conecting.Close();
+			}
+			catch 
+			{
+				MessageBox.Show("Erro ao fazer conexão com o banco de dado (Delete)");
+			}
+			
 		}
 		private void btnEdit_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txtTable_TextChanged(object sender, EventArgs e)
 		{
 
 		}
