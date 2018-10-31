@@ -84,6 +84,12 @@
     <Compile Include="newOrder.Designer.cs">
       <DependentUpon>newOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="login.resx">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newOrder.resx">
       <DependentUpon>newOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
