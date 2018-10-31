@@ -80,6 +80,11 @@ namespace PLPMonitoria
 								OleDbCommand comando = new OleDbCommand(orderfood, conecting);
 								comando.ExecuteNonQuery();
 
+                                // Buscando no banco o registro que acabou de ser inserido.
+                                string id_order_food = "select `id` from FoodOrders where `client` =  '"+txtName.Text+" ' and `board_number` = '" + txtTable.Text + " ' and  food = '"+ cmbFood.SelectedItem.ToString()+" ' ";
+                                OleDbCommand id = new OleDbCommand(id_order_food, conecting);
+
+
 								// Alterando o label Detalhes do pedido (adicionando o nome do cliente)
 								lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
 								// Adicionando o pedido ao DataGridView

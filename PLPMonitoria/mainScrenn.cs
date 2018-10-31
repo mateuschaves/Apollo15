@@ -50,5 +50,12 @@ namespace PLPMonitoria
 		{
 
 		}
-	}
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            Orders nt = new Orders();
+            nt.Show();
+            this.Hide();
+        }
+    }
 }
