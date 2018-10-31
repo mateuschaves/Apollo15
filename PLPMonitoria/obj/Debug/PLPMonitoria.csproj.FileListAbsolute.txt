@@ -62,4 +62,8 @@ C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.cs
 C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
 C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
 C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
+<<<<<<< HEAD
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.resources
+=======
+C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.resources
+>>>>>>> 01f0d232e303c1150e002899c5375d3479bddd20
