@@ -86,10 +86,10 @@ namespace PLPMonitoria
 						comand.ExecuteNonQuery();
 
 						// Atualiza o status do pedido no datagridview
-						dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[1].Value = cmbFood.SelectedItem.ToString();
+						//dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[1].Value = cmbFood.SelectedItem.ToString();
 
 						// Remove a linha selecionada no datagridview
-						//dataOrder.Rows.Remove(dataOrder.CurrentRow);
+						dataOrder.Rows.Remove(dataOrder.CurrentRow);
 
 						// Fechando o banco de dados
 						conecting.Close();

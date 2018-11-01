@@ -367,7 +367,50 @@ namespace PLPMonitoria
 		}
 		private void btnEdit_Click(object sender, EventArgs e)
 		{
+			try
+			{
+				// String de conection com o banco de dados
+				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+				OleDbConnection conecting = new OleDbConnection(strConection);
+				conecting.Open();
 
+				// Nome do produto selecionado 
+				string Produto_selecionado = dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[1].Value.ToString();
+				int quantidade_do_produto = Convert.ToInt32(dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[2].Value);
+
+				cmbDrink.Text = Produto_selecionado;
+
+				if (dataOrder.Rows[dataOrder.CurrentRow.Index].Cells[0].Value.ToString() == "Bebida")
+				{
+					// Coloca no combobox o produto selecionado e a quantidade
+					cmbDrink.Text = Produto_selecionado;
+					numDrink.Value = quantidade_do_produto;
+
+					// Deleta do banco de dados este pedido
+					string ExluiPedido = @"DELETE FROM DrinkOrders WHERE drink = '" + Produto_selecionado + "'";
+					OleDbCommand comand = new OleDbCommand(ExluiPedido, conecting);
+					comand.ExecuteNonQuery();
+				}
+				else
+				{
+					// Coloca no combobox o produto selecionado e a quantidade
+					cmbFood.Text = Produto_selecionado;
+					numFood.Value = quantidade_do_produto;
+					string ExluiPedido2 = @"DELETE FROM FoodOrders WHERE food = '" + Produto_selecionado + "'";
+					OleDbCommand comand = new OleDbCommand(ExluiPedido2, conecting);
+					comand.ExecuteNonQuery();
+				}
+
+				// Remove a linha selecionada no datagridview
+				dataOrder.Rows.Remove(dataOrder.CurrentRow);
+
+				// Fechando o banco de dados
+				conecting.Close();
+			}
+			catch
+			{
+				MessageBox.Show("Erro ao fazer conexão com o banco de dados ");
+			}
 		}
 
 		private void txtTable_TextChanged(object sender, EventArgs e)
