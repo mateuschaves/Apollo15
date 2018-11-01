@@ -48,6 +48,7 @@ C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.Ge
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
+<<<<<<< HEAD
 C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb
 C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
 C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe
@@ -68,3 +69,5 @@ C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.re
 C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.resources
 >>>>>>> 01f0d232e303c1150e002899c5375d3479bddd20
 >>>>>>> parent of 01f0d23... PedidosEmAndamentoUpdated
+=======
+>>>>>>> parent of 5c64acf... Tela de pedidos em andamento
