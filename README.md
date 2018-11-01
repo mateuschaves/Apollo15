@@ -5,7 +5,7 @@ Sistema responsável pelo gerenciamento de pedidos do restaurante Apollo 15.
 
 Baixe os arquivos com o seguinte comando
 
-``git clone https://github.com/mateuschaves/Apollo15.git``
+``git clone https://github.com/MRLSK8/Apollo15.git``
 
 Será criada uma pasta ```Apollo15``` com os arquivos do projeto.
 
