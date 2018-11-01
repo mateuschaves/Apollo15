@@ -42,10 +42,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.dataOrder = new System.Windows.Forms.DataGridView();
-			this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.lblDetails = new System.Windows.Forms.Label();
 			this.numFood = new System.Windows.Forms.NumericUpDown();
 			this.label4 = new System.Windows.Forms.Label();
@@ -76,6 +72,11 @@
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnEdit = new System.Windows.Forms.Button();
 			this.lblTotal = new System.Windows.Forms.Label();
+			this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.foodBindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.apollo15DataSet2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,7 +218,8 @@
             this.Tipo,
             this.Produto,
             this.Quantidade,
-            this.Preço});
+            this.Preço,
+            this.Mesa});
 			this.dataOrder.Location = new System.Drawing.Point(433, 125);
 			this.dataOrder.MultiSelect = false;
 			this.dataOrder.Name = "dataOrder";
@@ -228,42 +230,6 @@
 			this.dataOrder.Size = new System.Drawing.Size(522, 181);
 			this.dataOrder.TabIndex = 20;
 			this.dataOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataOrder_CellContentClick);
-			// 
-			// Tipo
-			// 
-			this.Tipo.HeaderText = "Tipo";
-			this.Tipo.Name = "Tipo";
-			this.Tipo.ReadOnly = true;
-			this.Tipo.Width = 75;
-			// 
-			// Produto
-			// 
-			this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.Produto.FillWeight = 105F;
-			this.Produto.HeaderText = "Produto";
-			this.Produto.Name = "Produto";
-			this.Produto.ReadOnly = true;
-			this.Produto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Produto.Width = 185;
-			// 
-			// Quantidade
-			// 
-			this.Quantidade.FillWeight = 105F;
-			this.Quantidade.HeaderText = "Quantidade";
-			this.Quantidade.Name = "Quantidade";
-			this.Quantidade.ReadOnly = true;
-			this.Quantidade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Quantidade.Width = 120;
-			// 
-			// Preço
-			// 
-			this.Preço.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.Preço.FillWeight = 105F;
-			this.Preço.HeaderText = "Preço unit.";
-			this.Preço.Name = "Preço";
-			this.Preço.ReadOnly = true;
-			this.Preço.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Preço.Width = 110;
 			// 
 			// lblDetails
 			// 
@@ -555,6 +521,49 @@
 			this.lblTotal.TabIndex = 41;
 			this.lblTotal.Text = "Total: R$ 0,00";
 			// 
+			// Tipo
+			// 
+			this.Tipo.HeaderText = "Tipo";
+			this.Tipo.Name = "Tipo";
+			this.Tipo.ReadOnly = true;
+			this.Tipo.Width = 75;
+			// 
+			// Produto
+			// 
+			this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.Produto.FillWeight = 105F;
+			this.Produto.HeaderText = "Produto";
+			this.Produto.Name = "Produto";
+			this.Produto.ReadOnly = true;
+			this.Produto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Produto.Width = 185;
+			// 
+			// Quantidade
+			// 
+			this.Quantidade.FillWeight = 105F;
+			this.Quantidade.HeaderText = "Quantidade";
+			this.Quantidade.Name = "Quantidade";
+			this.Quantidade.ReadOnly = true;
+			this.Quantidade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Quantidade.Width = 120;
+			// 
+			// Preço
+			// 
+			this.Preço.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.Preço.FillWeight = 105F;
+			this.Preço.HeaderText = "Preço unit.";
+			this.Preço.Name = "Preço";
+			this.Preço.ReadOnly = true;
+			this.Preço.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Preço.Width = 110;
+			// 
+			// Mesa
+			// 
+			this.Mesa.HeaderText = "Mesa";
+			this.Mesa.Name = "Mesa";
+			this.Mesa.ReadOnly = true;
+			this.Mesa.Visible = false;
+			// 
 			// newOrder
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -661,5 +670,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Mesa;
 	}
 }
