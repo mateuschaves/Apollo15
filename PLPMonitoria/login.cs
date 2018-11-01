@@ -31,11 +31,8 @@ namespace PLPMonitoria
         private void btnLogin_Click(object sender, EventArgs e)
         {
 			// String de conection com o banco de dados
-<<<<<<< HEAD
 			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
-=======
-			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
->>>>>>> 01f0d232e303c1150e002899c5375d3479bddd20
+			//string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
 			// Checkbox no banco de dados
 			try
 			{

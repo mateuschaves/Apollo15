@@ -83,10 +83,14 @@ namespace PLPMonitoria
                                 // Buscando no banco o registro que acabou de ser inserido.
                                 string id_order_food = "select `id` from FoodOrders where `client` =  '"+txtName.Text+" ' and `board_number` = '" + txtTable.Text + " ' and  food = '"+ cmbFood.SelectedItem.ToString()+" ' ";
                                 OleDbCommand id = new OleDbCommand(id_order_food, conecting);
+                                OleDbDataReader dr;
+                                dr = id.ExecuteReader();
+                                int id_order = dr.GetInt32(0);
+                                MessageBox.Show(id_order.ToString());
 
 
-								// Alterando o label Detalhes do pedido (adicionando o nome do cliente)
-								lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
+                                // Alterando o label Detalhes do pedido (adicionando o nome do cliente)
+                                lblDetails.Text = "Detalhes do pedido de " + txtName.Text.ToString();
 								// Adicionando o pedido ao DataGridView
 								dataOrder.Rows.Add("Comida",cmbFood.GetItemText(cmbFood.SelectedItem), numFood.Value.ToString(), "R$ " + String.Format("{0:0.00}", read_price_food["price"]));
 
