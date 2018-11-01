@@ -46,7 +46,7 @@ namespace PLPMonitoria
 		{
 
 			// String de conection com o banco de dados
-			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
 			
 			// Checando se o numero de produto é maior que zero
 			if (numFood.Value != 0)
@@ -66,7 +66,7 @@ namespace PLPMonitoria
 								// Abrindo o banco de dados
 								conecting.Open();
 
-								string cmd1 = @"SELECT price FROM Food WHERE nome = '"+ cmbFood.GetItemText(cmbFood.SelectedItem)+"'";
+								string cmd1 = @"SELECT price fROM Food WHERE nome = '"+ cmbFood.GetItemText(cmbFood.SelectedItem)+"'";
 								OleDbCommand comand = new OleDbCommand(cmd1, conecting);
 								OleDbDataReader read_price_food = comand.ExecuteReader();
 								read_price_food.Read();
@@ -287,7 +287,7 @@ namespace PLPMonitoria
 			try
 			{
 				// String de conection com o banco de dados
-				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
 				OleDbConnection conecting = new OleDbConnection(strConection);
 				conecting.Open();
 
@@ -342,7 +342,7 @@ namespace PLPMonitoria
 			try
 			{
 				// String de conection com o banco de dados
-				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
 				OleDbConnection conecting = new OleDbConnection(strConection);
 				conecting.Open();
 

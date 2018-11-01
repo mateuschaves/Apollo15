@@ -31,8 +31,12 @@ namespace PLPMonitoria
         private void btnLogin_Click(object sender, EventArgs e)
         {
 			// String de conection com o banco de dados
+<<<<<<< HEAD
 			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
 			//string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+=======
+			string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Daniel Victor\Documents\Apollo15\Apollo15.mdb";
+>>>>>>> parent of 01f0d23... PedidosEmAndamentoUpdated
 			// Checkbox no banco de dados
 			try
 			{
@@ -85,7 +89,7 @@ namespace PLPMonitoria
 			try
 			{
 				// String de conection com o banco de dados
-				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Aline\Desktop\Apollo15\Apollo15.mdb";
+				string strConection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mateus\Documents\Apollo15\Apollo15.mdb";
 				// Conectando com o banco de dados
 				OleDbConnection conecting = new OleDbConnection(strConection);
 				// Abrindo o banco de dados
