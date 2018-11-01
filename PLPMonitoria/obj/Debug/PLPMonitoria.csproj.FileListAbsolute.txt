@@ -1,45 +1,7 @@
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\bin\Debug\PLPMonitoria.exe
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.Properties.Resources.resources
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.GenerateResource.cache
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.exe
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources
-C:\Users\mateus\source\repos\PLPMonitoria\PLPMonitoria\obj\Debug\PLPMonitoria.newOrder.resources
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.newOrder.resources
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Properties.Resources.resources
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.GenerateResource.cache
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
-C:\Users\Aline\Desktop\projeto\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.newOrder.resources
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Properties.Resources.resources
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.GenerateResource.cache
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
-C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.newOrder.resources
@@ -48,26 +10,3 @@ C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.Ge
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
 C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
-<<<<<<< HEAD
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\Apollo15.mdb
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe.config
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.exe
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\bin\Debug\PLPMonitoria.pdb
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csprojAssemblyReference.cache
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.login.resources
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.mainScrenn.resources
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.newOrder.resources
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.resources
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Properties.Resources.resources
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.GenerateResource.cache
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.csproj.CoreCompileInputs.cache
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.exe
-C:\Users\Daniel Victor\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.pdb
-<<<<<<< HEAD
-C:\Users\mateus\Documents\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.resources
-=======
-C:\Users\Aline\Desktop\Apollo15\PLPMonitoria\obj\Debug\PLPMonitoria.Orders.resources
->>>>>>> 01f0d232e303c1150e002899c5375d3479bddd20
->>>>>>> parent of 01f0d23... PedidosEmAndamentoUpdated
-=======
->>>>>>> parent of 5c64acf... Tela de pedidos em andamento
